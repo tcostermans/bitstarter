@@ -5,7 +5,6 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
 var content;
-// First I want to read the file
 fs.readFileSync('./index.html', function read(err, data) {
     if (err) {
         throw err;
@@ -13,7 +12,6 @@ fs.readFileSync('./index.html', function read(err, data) {
     content = data;
 
     console.log(content); 
-});
 });
 
 
